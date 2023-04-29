@@ -8,7 +8,7 @@
 }
 
 #logo {
-    font-size: 5em;
+    font-size: 4em;
     font-family: 'Allura', cursive;
 }
 
@@ -74,21 +74,23 @@ header > img{
   }
 
   #amount-raised,
-  #goal,
-  #days-left {
+  #goal{
     font-size: 24px;
     margin: 10px 0;
   }
 
-  #goal{
-    float: right;
+  #flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   
   /* Temporizador */
 
   .countdown {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-size: 30px;
     font-weight: bold;

@@ -31,7 +31,7 @@ function updateProgress() {
   //Progress Bar
   var progress = amountRaised / goal * 100;
   document.getElementById("progress").style.width = progress + "%";
-  document.getElementById("amount-raised").innerHTML = amountRaised.toLocaleString('pt-br', {
+  document.getElementById("amount-raised").innerHTML = "Atual: " + amountRaised.toLocaleString('pt-br', {
     style: 'currency',
     currency: 'BRL'
   });
