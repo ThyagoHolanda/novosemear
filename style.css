@@ -44,7 +44,7 @@ header > img{
 }
 
 #percen {
-    width: 75vw;
+    width: 65vw;
     height: auto;
     margin: auto;
     padding: 10px;
@@ -89,7 +89,7 @@ header > img{
 
   .countdown {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     font-size: 30px;
     font-weight: bold;
