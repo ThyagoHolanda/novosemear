@@ -75,7 +75,6 @@ header > img{
 
   #amount-raised,
   #goal{
-    display: flex;
     font-size: 24px;
     margin: 10px 0;
   }
