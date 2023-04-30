@@ -35,7 +35,7 @@ function updateProgress() {
     style: 'currency',
     currency: 'BRL'
   });
-  document.getElementById("goal").innerHTML = "Meta: " + goal.toLocaleString('pt-br', {
+  document.getElementById("goal").innerHTML = "Total: " + goal.toLocaleString('pt-br', {
     style: 'currency',
     currency: 'BRL'
   });
