@@ -1,9 +1,9 @@
-var amountRaised = 75;
+var amountRaised = 77.43;
 var goal = (25 * 11) * 25;
 
 function updateProgress() { 
   var countdown = document.querySelector(".countdown");
-  var targetDate = new Date("02/13/2024");
+  var targetDate = new Date("02/09/2024");
   var daysElement = document.getElementById("days");
   var hoursElement = document.getElementById("hours");
   var minutesElement = document.getElementById("minutes");
