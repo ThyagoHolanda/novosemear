@@ -1,5 +1,8 @@
-var amountRaised = 77.43;
+var amountRaised = 125;
+var rendimento = 300-amountRaised;
 var goal = (25 * 11) * 25;
+// amountRaised = 125;
+// rendimento = 127.43-amountRaised;
 
 function updateProgress() { 
   var countdown = document.querySelector(".countdown");
@@ -32,6 +35,10 @@ function updateProgress() {
   var progress = amountRaised / goal * 100;
   document.getElementById("progress").style.width = progress + "%";
   document.getElementById("amount-raised").innerHTML = "Atual: " + amountRaised.toLocaleString('pt-br', {
+    style: 'currency',
+    currency: 'BRL'
+  });
+  document.getElementById("rendimento").innerHTML = "Rendimento: " + rendimento.toLocaleString('pt-br', {
     style: 'currency',
     currency: 'BRL'
   });

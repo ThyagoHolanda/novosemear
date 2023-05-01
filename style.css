@@ -91,10 +91,26 @@ header > h1 {
 }
 
 #amount-raised,
-#goal{
+#goal,
+#rendimento{
   font-weight: bold;
-  font-size: 30px;
-  margin: 10px 0;
+  margin: 10px;
+}
+
+@media screen and (min-width: 401px) {
+  #amount-raised,
+  #goal,
+  #rendimento {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #amount-raised,
+  #goal,
+  #rendimento {
+    font-size: 23px;
+  }
 }
 
 /* Temporizador */
