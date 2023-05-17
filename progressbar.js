@@ -1,4 +1,4 @@
-var amountRaised = 125;
+var amountRaised = 150;
 var goal = (25 * 11) * 25;
 
 function updateProgress() { 
