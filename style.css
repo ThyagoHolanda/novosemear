@@ -66,6 +66,7 @@ header > h1 {
 #progress-bar {
   display: flex;
   flex-grow: 99;
+  align-items: center;
   height: 2.5vh;
   background-color: var(--fundobarra);
   border-radius: 10px;

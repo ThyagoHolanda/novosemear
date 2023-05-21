@@ -1,4 +1,10 @@
-var amountRaised = 150;
+const anne = [25];
+const renan = [25,25];
+const mayara = [25,25];
+const thyago = [25];
+const hely = [25];
+
+var amountRaised = (anne.length+renan.length+mayara.length+thyago.length+hely.length)*25;
 var goal = (25 * 11) * 25;
 
 function updateProgress() { 
