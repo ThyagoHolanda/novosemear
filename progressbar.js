@@ -1,13 +1,13 @@
 const anne = [25];
-const renan = [25,25];
-const mayara = [25,25];
+const renan = [25, 25, 25];
+const mayara = [25, 25];
 const thyago = [25];
 const hely = [25];
 
-var amountRaised = (anne.length+renan.length+mayara.length+thyago.length+hely.length)*25;
+var amountRaised = (anne.length + renan.length + mayara.length + thyago.length + hely.length) * 25;
 var goal = (25 * 11) * 25;
 
-function updateProgress() { 
+function updateProgress() {
   var countdown = document.querySelector(".countdown");
   var targetDate = new Date("02/09/2024");
   var daysElement = document.getElementById("days");
@@ -32,8 +32,8 @@ function updateProgress() {
   function formatTime(time) {
     return time < 10 ? `0${time}` : time;
   }
-  
-  
+
+
   //Progress Bar
   var progress = amountRaised / goal * 100;
   document.getElementById("progress").style.width = progress + "%";
@@ -48,7 +48,6 @@ function updateProgress() {
   });
   document.getElementById('porcentagem').innerHTML = progress.toFixed(2) + "%";
 }
-  
+
 setInterval(updateProgress, 1000);
-  
-  
+
