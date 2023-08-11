@@ -1,47 +1,78 @@
-const anne = [25, 0, 0, 0];
-const renan = [25, 25, 25, 0];
-const mayara = [25, 25, 25 ,0];
-const thyago = [25, 0, 0, 0];
-const hely = [25, 0, 0, 0];
-var soma = 0;
+const pag = [
+  { nome: "Anny", mar: 25, abr: 0, mai: 0, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
+  { nome: "Renan", mar: 25, abr: 25, mai: 25, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
+  { nome: "Mayara", mar: 25, abr: 25, mai: 25, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
+  { nome: "Thyago", mar: 25, abr: 0, mai: 0, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
+  { nome: "Helyziane", mar: 25, abr: 0, mai: 0, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
+]
 
-for (i = 0; i < 12; i++) {
-  if (i<anne.length) {
-      soma += Number(anne[i]);
+let amountRaised = totalPag();
+let goal = (25 * 11) * 25;
+
+
+
+function totalPag() {
+  let soma = 0;
+  for (const pessoa of pag) {
+    for (const mes in pessoa) {
+      if (typeof pessoa[mes] === 'number') {
+        soma += pessoa[mes];
+      }
+    }
   }
-  if (i<renan.length) {
-      soma += Number(renan[i]);
-  }
-  if (i<mayara.length) {
-      soma += Number(mayara[i]);
-  }
-  if (i<thyago.length) {
-      soma += Number(thyago[i]);
-  }
-  if (i<hely.length) {
-      soma += Number(hely[i]);
+  return soma;
+}
+
+function totalPessoa() {
+
+  const totalPorPessoa = {};
+  for (const pessoa of pag) {
+    let total = 0;
+
+    for (const mes in pessoa) {
+      if (mes !== "nome") {
+        total += pessoa[mes];
+      }
+    }
+
+    totalPorPessoa[pessoa.nome] = total;
+    let totalp = document.getElementById(pessoa.nome);
+    totalp.innerHTML = `<strong>${pessoa.nome}</strong>: ${total.toLocaleString('pt-br', {
+    style: 'currency',
+    currency: 'BRL'
+  })}`
   }
 }
 
-var amountRaised = soma;
-var goal = (25 * 11) * 25;
+
+function totalMes() {
+  const totalPorMes = {};
+  for (const pessoa of pag) {
+    for (const mes in pessoa) {
+      if (mes !== "nome") {
+        totalPorMes[mes] = (totalPorMes[mes] || 0) + pessoa[mes];
+      }
+    }
+  }
+}
+
 
 function updateProgress() {
-  var countdown = document.querySelector(".countdown");
-  var targetDate = new Date("02/09/2024");
-  var daysElement = document.getElementById("days");
-  var hoursElement = document.getElementById("hours");
-  var minutesElement = document.getElementById("minutes");
-  var secondsElement = document.getElementById("seconds");
+  let countdown = document.querySelector(".countdown");
+  let targetDate = new Date("02/09/2024");
+  let daysElement = document.getElementById("days");
+  let hoursElement = document.getElementById("hours");
+  let minutesElement = document.getElementById("minutes");
+  let secondsElement = document.getElementById("seconds");
 
 
-  var currentDate = new Date();
-  var difference = targetDate.getTime() - currentDate.getTime();
+  let currentDate = new Date();
+  let difference = targetDate.getTime() - currentDate.getTime();
 
-  var days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
   daysElement.textContent = formatTime(days);
   hoursElement.textContent = formatTime(hours);
@@ -54,7 +85,7 @@ function updateProgress() {
 
 
   //Progress Bar
-  var progress = amountRaised / goal * 100;
+  let progress = amountRaised / goal * 100;
   document.getElementById("progress").style.width = progress + "%";
   document.getElementById("amount-raised").innerHTML = "Atual: " + amountRaised.toLocaleString('pt-br', {
     style: 'currency',
@@ -66,6 +97,8 @@ function updateProgress() {
     currency: 'BRL'
   });
   document.getElementById('porcentagem').innerHTML = progress.toFixed(2) + "%";
+
+  totalPessoa()
 }
 
 setInterval(updateProgress, 1000);

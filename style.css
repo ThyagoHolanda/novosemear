@@ -137,3 +137,10 @@ header > h1 {
 .countdown-item span:last-child {
   font-size: 15px;
 }
+
+.nomes{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
