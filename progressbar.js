@@ -11,6 +11,8 @@ let goal = (25 * 11) * 25;
 
 
 
+
+
 function totalPag() {
   let soma = 0;
   for (const pessoa of pag) {
@@ -107,29 +109,29 @@ setInterval(updateProgress, 1000);
 
 function graf() {
   // Dados para o gráfico
-const meses = ["mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez", "jan"];
+  const meses = ["mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez", "jan"];
 
-// Crie o gráfico
-const ctx = document.getElementById("grafico").getContext("2d");
-const meuGrafico = new Chart(ctx, {
-  type: "bar", // Tipo de gráfico (barra)
-  data: {
-    labels: meses,
-    datasets: [{
-      label: "Totais por Mês",
-      data: totalMes(),
-      backgroundColor: "rgba(75, 192, 192, 0.2)", // Cor das barras
-      borderColor: "rgba(75, 192, 192, 1)", // Cor da borda das barras
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true // Começa o eixo y a partir do zero
+  // Crie o gráfico
+  const ctx = document.getElementById("grafico").getContext("2d");
+  const meuGrafico = new Chart(ctx, {
+    type: "bar", // Tipo de gráfico (barra)
+    data: {
+      labels: meses,
+      datasets: [{
+        label: "Totais por Mês",
+        data: totalMes(),
+        backgroundColor: "rgba(75, 192, 192, 0.2)", // Cor das barras
+        borderColor: "rgba(75, 192, 192, 1)", // Cor da borda das barras
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true // Começa o eixo y a partir do zero
+        }
       }
     }
-  }
-});
+  });
 }
 

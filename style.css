@@ -25,7 +25,7 @@ header {
   margin: auto;
 }
 
-header > h1 {
+header>h1 {
   background-color: white;
   padding: 0px 20px;
   border-radius: 5px;
@@ -44,12 +44,16 @@ header > h1 {
   font-size: 150%;
 }
 
+#main-flex {
+  display: flex;
+}
+
 #amount {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
+  margin: 10px auto;
   padding: 1vw;
   background-color: white;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.200);
@@ -57,12 +61,14 @@ header > h1 {
 }
 
 @media screen and (min-width: 401px) {
+
   #amount {
     width: 45vw;
   }
 }
 
 @media screen and (max-width: 400px) {
+
   #amount {
     width: 90vw;
   }
@@ -83,7 +89,7 @@ header > h1 {
   border-radius: 10px;
   margin: 5px;
 }
-  
+
 #progress {
   display: flex;
   height: 80%;
@@ -98,12 +104,13 @@ header > h1 {
 }
 
 #amount-raised,
-#goal{
+#goal {
   font-weight: bold;
   margin: 10px;
 }
 
 @media screen and (min-width: 401px) {
+
   #amount-raised,
   #goal {
     font-size: 30px;
@@ -111,6 +118,7 @@ header > h1 {
 }
 
 @media screen and (max-width: 400px) {
+
   #amount-raised,
   #goal,
   #rendimento {
@@ -144,7 +152,7 @@ header > h1 {
   font-size: 15px;
 }
 
-.nomes{
+.nomes {
   display: flex;
   flex-direction: column;
   padding: 20px;
