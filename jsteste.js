@@ -44,7 +44,6 @@ function totalPessoa() {
 
     console.log(totalPorPessoa);
 }
-totalPessoa();
 
 // Total por mes
 

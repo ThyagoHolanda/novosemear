@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
   <script src="progressbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="updateProgress();">
+<body onload="updateProgress(); totalPessoa();">
 
   <header>
     <h1 id="logo">Novo Semear</h1>
@@ -52,13 +53,14 @@
           <span>Segundos</span>
         </div>
       </div>
-      <div class="nomes">
-        <div id="Anny"></div>
+      <div class="nomes" id="nome">
+        <!-- <div id="Anny"></div>
         <div id="Renan"></div>
         <div id="Mayara"></div>
         <div id="Thyago"></div>
-        <div id="Helyziane"></div>
+        <div id="Helyziane"></div> -->
       </div>
+      <canvas id="grafico"></canvas>
     </section>
   </main>
 </body>

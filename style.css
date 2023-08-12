@@ -48,7 +48,7 @@ header > h1 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 79vw;
+  justify-content: center;
   margin: auto;
   padding: 1vw;
   background-color: white;
@@ -56,10 +56,21 @@ header > h1 {
   border-radius: 10px;
 }
 
+@media screen and (min-width: 401px) {
+  #amount {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #amount {
+    width: 90vw;
+  }
+}
+
 #bar-porcent {
   display: flex;
   align-items: baseline;
-  justify-content: center;
   width: 100%;
 }
 
@@ -80,11 +91,6 @@ header > h1 {
   border-radius: 10px;
 }
 
-#porcentagem {
-  display: flex;
-  flex-grow: 1;
-}
-
 #flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -92,16 +98,14 @@ header > h1 {
 }
 
 #amount-raised,
-#goal,
-#rendimento{
+#goal{
   font-weight: bold;
   margin: 10px;
 }
 
 @media screen and (min-width: 401px) {
   #amount-raised,
-  #goal,
-  #rendimento {
+  #goal {
     font-size: 30px;
   }
 }
@@ -117,17 +121,19 @@ header > h1 {
 /* Temporizador */
 .countdown {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  align-content: flex-end;
+  background-color: var(--fundobarra);
+  border-radius: 10px;
+  padding: 10px;
+  max-width: fit-content;
+  margin: 0 auto;
 }
 
 .countdown-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0 20px;
+  margin: 0 15px;
 }
 
 .countdown-item span:first-child {
@@ -141,6 +147,59 @@ header > h1 {
 .nomes{
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 20px;
+  background-color: var(--fundobarra);
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
+/* Estilize os elementos individuais de nome */
+.nomes div {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Estilize a fonte dos nomes */
+.nomes div strong {
+  font-size: 20px;
+}
+
+/* Adicione margem apenas para o último elemento de nome */
+.nomes div:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Estilos para o gráfico */
+#grafico {
+  min-width: 90%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+}
+
+/* Estilizando a legenda do gráfico */
+.legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.legend span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+/* Estilizando as etiquetas de dados */
+.chartjs-datalabels {
+  font-size: 12px;
+  font-weight: bold;
+}
