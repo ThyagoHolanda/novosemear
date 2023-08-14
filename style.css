@@ -20,35 +20,66 @@ body {
   background-color: var(--fundobody);
 }
 
+/* Logo */
 header {
-  max-width: max-content;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.200);
+  width: max-content;
   margin: auto;
+  padding: 0px 20px;
+}
+
+header>h3 {
+  text-align: center;
+  font-size: 100%;
 }
 
 header>h1 {
-  background-color: white;
-  padding: 0px 20px;
-  border-radius: 5px;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.200);
-  font-size: 400%;
+
+  margin: 0;
   font-family: 'Allura', cursive;
   text-align: center;
+  font-size: 300%;
 }
 
-#info {
-  text-align: center;
+/* (Fim) Logo (Fim) */
+
+.info {
+  background-color: var(--fundobarra);
+  /* Use a mesma cor de fundo dos outros elementos */
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 5px;
   margin: 20px auto;
-  background-color: white;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.200);
-  border-radius: 1px;
-  font-size: 150%;
+  width: 90vw;
+
+  text-align: center;
+  /* Centralize o conteúdo */
+  color: #333;
+  /* Cor de texto legível */
 }
 
-#main-flex {
+@media screen and (min-width: 401px) {
+
+  .info h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .info h1 {
+    font-size: 24px;
+  }
+}
+
+main .main-flex {
   display: flex;
+  flex-direction: column;
 }
 
-#amount {
+main .main-flex .amount {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -60,21 +91,27 @@ header>h1 {
   border-radius: 10px;
 }
 
+main .main-flex .amount h2 {
+  text-align: center;
+  margin: 0.25vw 0 1vw 0;
+}
+
 @media screen and (min-width: 401px) {
 
-  #amount {
-    width: 45vw;
+  .amount {
+    width: 75vw;
   }
 }
 
 @media screen and (max-width: 400px) {
 
-  #amount {
+  .amount {
     width: 90vw;
   }
 }
 
-#bar-porcent {
+/* Barra de progresso */
+.bar-porcent {
   display: flex;
   align-items: baseline;
   width: 100%;
@@ -97,7 +134,10 @@ header>h1 {
   border-radius: 10px;
 }
 
-#flex-container {
+/* (Fim) Barra de progresso (Fim) */
+
+/* Valor arrecadado e meta */
+.flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -120,13 +160,14 @@ header>h1 {
 @media screen and (max-width: 400px) {
 
   #amount-raised,
-  #goal,
-  #rendimento {
+  #goal {
     font-size: 23px;
   }
 }
 
-/* Temporizador */
+/* (Fim) Valor arrecadado e meta (Fim) */
+
+/* Contagem regressiva */
 .countdown {
   display: flex;
   justify-content: center;
@@ -152,6 +193,9 @@ header>h1 {
   font-size: 15px;
 }
 
+/* (Fim) Contagem regressiva (Fim) */
+
+/* Estilize os elementos individuais de nome */
 .nomes {
   display: flex;
   flex-direction: column;
@@ -161,7 +205,6 @@ header>h1 {
   margin-top: 20px;
 }
 
-/* Estilize os elementos individuais de nome */
 .nomes div {
   padding: 10px;
   margin-bottom: 10px;

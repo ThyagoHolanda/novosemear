@@ -19,27 +19,36 @@
 <body onload="updateProgress(); totalPessoa();">
 
   <header>
+    <h3>Assembleia de Deus</h3>
     <h1 id="logo">Novo Semear</h1>
   </header>
 
   <main>
-    <article id="info">
+    <article class="info">
       <h1>Retiro carnaval 2024</h1>
     </article>
 
-    <article id="main-flex">
+    <article class="main-flex">
 
-      <section id="amount">
-        <div id="bar-porcent">
+      <section Class="amount">
+        <h2>Valor arrecadado e meta</h2>
+        <!-- Barra de progresso -->
+        <div class="bar-porcent">
           <div id="progress-bar">
             <div id="progress"></div>
           </div>
           <div id="porcentagem">5%</div>
         </div>
-        <div id="flex-container">
+        <!-- (Fim) Barra de progresso (Fim) -->
+
+        <!-- Valor arrecadado e Meta  -->
+        <div class="flex-container">
           <p id="amount-raised">R$0</p>
           <p id="goal">Meta:</p>
         </div>
+        <!-- (Fim) Valor arrecadado e Meta (Fim)  -->
+
+        <!-- Contagem regressiva -->
         <div class="countdown">
           <div class="countdown-item">
             <span id="days"></span>
@@ -58,15 +67,23 @@
             <span>Segundos</span>
           </div>
         </div>
+        <!-- (Fim) Contagem regressiva (Fim) -->
+      </section>
+
+      <section class="amount">
+        <!-- Valor por pessoa -->
+        <h2>Valor pago por pessoa</h2>
         <div class="nomes" id="nome">
-          <!-- <div id="Anny"></div>
-          <div id="Renan"></div>
-          <div id="Mayara"></div>
-          <div id="Thyago"></div>
-          <div id="Helyziane"></div> -->
         </div>
+        <!-- (Fim) Valor por pessoa (Fim) -->
+
+      </section>
+
+      <section class="amount">
+        <h2>Valor pago por mês</h2>
         <canvas id="grafico"></canvas>
       </section>
+
     </article>
   </main>
 </body>
