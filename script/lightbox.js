@@ -1,7 +1,7 @@
 const lightbox = document.getElementById('lightbox');
 const closeBtn = document.getElementById('close-btn');
 const lightboxImg = document.getElementById('lightbox-img');
-const images = document.querySelectorAll('.casa img');
+const images = document.querySelectorAll('.imagem img');
 
 lightbox.style.display = 'none';
 

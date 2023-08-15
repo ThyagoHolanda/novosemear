@@ -53,11 +53,14 @@ header>h1 {
   padding: 5px;
   margin: 20px auto;
   width: 90vw;
-
   text-align: center;
   /* Centralize o conteúdo */
   color: #333;
   /* Cor de texto legível */
+}
+
+.info h1 {
+  margin: 0;
 }
 
 @media screen and (min-width: 401px) {
@@ -100,6 +103,7 @@ main .main-flex .amount h2 {
 
   .amount {
     width: 85vw;
+    font-size: 100%;
   }
 }
 
@@ -107,6 +111,7 @@ main .main-flex .amount h2 {
 
   .amount {
     width: 90vw;
+    font-size: 80%;
   }
 }
 
@@ -144,7 +149,8 @@ main .main-flex .amount h2 {
 }
 
 #amount-raised,
-#goal {
+#goal,
+#valor-casa {
   font-weight: bold;
   margin: 10px;
 }
@@ -152,7 +158,8 @@ main .main-flex .amount h2 {
 @media screen and (min-width: 401px) {
 
   #amount-raised,
-  #goal {
+  #goal,
+  #valor-casa {
     font-size: 30px;
   }
 }
@@ -160,7 +167,8 @@ main .main-flex .amount h2 {
 @media screen and (max-width: 400px) {
 
   #amount-raised,
-  #goal {
+  #goal,
+  #valor-casa {
     font-size: 23px;
   }
 }
@@ -253,4 +261,46 @@ main .main-flex .amount h2 {
 .chartjs-datalabels {
   font-size: 12px;
   font-weight: bold;
+}
+
+/* Estilizando menu */
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  background-color: rgba(236, 236, 236, 0.750);
+  margin: 0 15px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+  /* Aumenta ligeiramente o tamanho ao passar o mouse */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+  ;
+}
+
+nav ul li a:hover {
+  color: #0400ff;
+}
+
+nav ul li.active {
+  background-color: rgb(236, 236, 236);
+  ;
 }
