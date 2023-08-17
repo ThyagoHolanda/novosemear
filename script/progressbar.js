@@ -1,6 +1,6 @@
 const pag = [
     { nome: "Anny", mar: 25, abr: 0, mai: 0, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
-    { nome: "Renan", mar: 25, abr: 25, mai: 25, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
+    { nome: "Renan", mar: 25, abr: 25, mai: 25, jun: 25, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
     { nome: "Mayara", mar: 25, abr: 25, mai: 25, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
     { nome: "Thyago", mar: 25, abr: 0, mai: 0, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
     { nome: "Helyziane", mar: 25, abr: 0, mai: 0, jun: 0, jul: 0, ago: 0, set: 0, out: 0, nov: 0, dez: 0, jan: 0 },
@@ -113,12 +113,12 @@ function updateProgress() {
   //Progress Bar
   let progress = amountRaised / goal * 100;
   document.getElementById("progress").style.width = progress + "%";
-  document.getElementById("amount-raised").innerHTML = "Atual: " + amountRaised.toLocaleString('pt-br', {
+  document.getElementById("amount-raised").innerHTML = "Pago: " + amountRaised.toLocaleString('pt-br', {
     style: 'currency',
     currency: 'BRL'
   });
 
-  document.getElementById("goal").innerHTML = "Total: " + goal.toLocaleString('pt-br', {
+  document.getElementById("goal").innerHTML = "Meta: " + goal.toLocaleString('pt-br', {
     style: 'currency',
     currency: 'BRL'
   });
