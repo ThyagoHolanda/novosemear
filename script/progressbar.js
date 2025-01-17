@@ -1,5 +1,5 @@
 const pag = [
-    { nome: "Renan", nov: 0},
+    { nome: "Renan", Jan: 400},
     { nome: "Mayara", nov: 402},
     { nome: "Thyago", set: 33},
     { nome: "Helyziane", set: 219},
@@ -7,27 +7,26 @@ const pag = [
     { nome: "Gabriel", mar: 0},
     { nome: "Junior", mai: 50, nov:22},
     { nome: "Igor", mar: 0},
-    { nome: "Sofia", out: 79, nov: 84},
+    { nome: "Sofia", out: 79, nov: 84, Jan: 237},
     { nome: "Cena", mar: 0},
-    { nome: "Leticia Soares", mar: 0},
+    { nome: "Leticia Soares", Jan: 200},
     { nome: "Vitoria Mariana", mar: 0},
     { nome: "Geovana", nov: 213},
     { nome: "Emily", mar: 0},
     { nome: "Eriki", mar: 0},
-    { nome: "Rodrigo", mar: 0},
-    { nome: "Isabele", set: 50},
+    { nome: "Rodrigo", Jan: 200},
+    { nome: "Isabele", set: 50, dez: 100, jan: 50},
     { nome: "Castnia", mar: 0},
     { nome: "Adriano", mar: 0},
     { nome: "Ester", set: 18},
     { nome: "Gregorio", set: 36},
-    { nome: "Feijoada", jul: 1000},
 ]
 
 // Ordena o array em ordem alfabética pelo nome das pessoas
 pag.sort((a, b) => a.nome.localeCompare(b.nome));
 
 let amountRaised = totalPag();
-let goal = 400 * (pag.length-1);
+let goal = (400 * (pag.length-2))-600;
 
 function totalPag() {
   let soma = 0;
